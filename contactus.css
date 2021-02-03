@@ -19,9 +19,8 @@ body{
     padding:0;
     margin: 0;
     height:100%;
-    background-image: linear-gradient(#7F7FD5,#86A8E7,#91EAE4);
     padding-bottom: 50px;
-
+    background-image: linear-gradient(#7F7FD5,#86A8E7,#91EAE4);
 }
   
 .card{
@@ -35,6 +34,9 @@ body{
     border-radius :30px;
     box-shadow: 0px 0px 25px 5px black;
     height:100%;
+    padding-bottom: 30px;
+    background-color: aliceblue;
+
 }
 header{
     padding-top :30px;
@@ -116,121 +118,113 @@ button:hover{
 .part-right img{
     max-width: 100%;
 }
-.hero h1{
+.hero{
+    display: flex;
+}
+.left-img img{
+    max-width:100%;
+}
+
+form{
+    padding: 20px 20px;
+    border-radius: 23px;
+    background-image: linear-gradient(#7F7FD5,#86A8E7,#91EAE4);
+
+}
+form h1{
     font-family: "poping_Bold";
-    font-size: clamp(1rem,10vw,5rem);
-    font-style: normal;
-    font-weight:bolder;
-    line-height: 1.5;
-}
-.hero p{
-    font-family: "poping_regular";
-    font-size:16px;
-    font-style: normal;
-    font-weight:400;
-    line-height: 25px;
-}
-.get-start{
-   margin-top: 50px;
-}
-.get-start button{
-    padding:9px 32px;
-}
-
-
-.sociel-media .fa {
-    padding: 12px 0px;
-    font-size: 24px;
-    width: 50px;
+    font-size:40px;
     text-align: center;
-    text-decoration: none;
-    border-radius: 100%;
-  }
-  .fa:hover {
-    opacity: 0.7;
-  }
-  .fa-facebook,.fa-instagram,.fa-twitter{
-    color: white;
-  }
-
-  .fa-facebook {
-    background: #3B5998;
-    margin-right: 20px;
-  }
-  .fa-twitter {
-    background: #55ACEE;
-  }
-  .fa-instagram {
-    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%); 
-    margin-left: 20px;
-  }
-  .sociel-media{
-      padding-bottom: 30px;
-  }
-
-  .camera,.cask,.curbe{
-    position: absolute;
-  }
-  .camera,.curbe{
-    width:10%;
-    left:82%;
-  }
-  .camera{
-      bottom:500px;
-  }
-  .curbe{
-    bottom:50px;
 }
-  
-  .cask img{
-      width:45% ;
-  }
-  .cask{
-    bottom:400px;
-    right:80%;
+.first-last-name{
+    display: flex;
+}
+.first-name,.last-name,.email,.phone,.password{
+    display:grid;
+    padding-bottom: 20px;
+
+}
+.first-name input,.last-name input{
+    width:80%;
+}
+.input-lastname {
+    text-align:end;
+}
+.last-name label{
+    padding-left: 20px;
+}
+.left-img{
+    max-width:50%;
+    padding-top: 100px;
+}
+input{
+    width:95%;
+    border-radius: 10px;
+    height:40px;
+    border:1px solid black;
+
+}
+input:hover{
+    background-color:rgb(221, 221, 221);
+}
+label{
+    font-size:15px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-weight:bold;
+    padding-bottom: 10px;
+}
+
+form :placeholder-shown {
+    font-size: 15px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.96;
+    letter-spacing: normal;
+    color: #7e7e7e;
+    padding-left: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.submit-btn{
+    text-align:end;
+}
+.submit-btn button{
+    padding:9px 32px;
 }
 
 @media only screen and (max-width: 1140px) {
 
     .hero h1{
-        width: 300px;
+        font-size:28px !important;
+        line-height:40px;
     }
     .menu{
-        display:none;
+        position:absolute;
+        visibility: hidden;
     }
     .logo,.login{
         width: 50%;
     }
-    .curbe{
-        bottom:140px;
-    }
-     
+
  }
-
-
  @media only screen and (max-width: 768px) {
 
     .hero{
-        display:block;
-        text-align:center;
+        display: block;
+        text-align: center;
     }
-    .hero .part-left , .hero .part-right{
-        max-width:100% !important;
-        margin-left: auto;
-        margin-right: auto;
+    .left-img{
+        max-width: 100%;
     }
-    .hero h1{
-        width: auto !important;
+    label{
+        text-align: initial;
     }
-    .curbe{
-        bottom: 200px;
-        left: 70%;
+    .left-img {
+        padding-top: 0px;
     }
-    .cask img{
-        width:55% ;
-    }
-
  }
+
  @media only screen and (max-width: 560px) {
 
     .navbar{
@@ -244,12 +238,18 @@ button:hover{
     .login,.logo{
         text-align:center;
     }
-    .curbe{
-        bottom: 70px;
-        left: 70%;
+    .first-last-name{
+        display:block;
     }
-    .camera{
-        left: 70%;
+    .input-lastname{
+        text-align: initial;
     }
+    .last-name label {
+        padding-left: 0px !important;
+    }
+    .first-name input, .last-name input {
+        width: 95%;
+    }
+
 
  }
